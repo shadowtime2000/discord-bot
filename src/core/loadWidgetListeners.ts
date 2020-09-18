@@ -1,9 +1,11 @@
+import { Client } from "discord.js";
+
 const getWidgetHandlerMap = require("./getWidgetHandlerMap");
 
 const runHandlers = (handlers, ...eventArguments) =>
   handlers.forEach((handler) => handler(...eventArguments));
 
-export default (client) => {
+export default (client: Client) => {
   const { ready, ...widgetHandlerMap } = getWidgetHandlerMap();
 
   process.on("unhandledRejection", console.warn);
