@@ -5,9 +5,7 @@
     "node": true
   },
   "extends": ["eslint:recommended"],
-  "parserOptions": {
-    "ecmaVersion": 2018
-  },
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "curly": "warn",
     "no-console": "off",

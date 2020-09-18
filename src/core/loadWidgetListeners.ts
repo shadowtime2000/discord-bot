@@ -3,7 +3,7 @@ const getWidgetHandlerMap = require("./getWidgetHandlerMap");
 const runHandlers = (handlers, ...eventArguments) =>
   handlers.forEach((handler) => handler(...eventArguments));
 
-module.exports = (client) => {
+export default (client) => {
   const { ready, ...widgetHandlerMap } = getWidgetHandlerMap();
 
   process.on("unhandledRejection", console.warn);
